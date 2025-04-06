@@ -97,7 +97,7 @@
             <span>Site vitrine :</span> pour présenter votre activité avec élégance.</br>
             <span>Plateforme interactive :</span> pour une expérience utilisateur engageante.</br>
             <span>sur mesure :</span> pour répondre à des besoins spécifiques.</p>
-          <a href="wa.me/22892529800" class="btn">Commande</a>
+          <a href="https://wa.me/22892529800" class="btn">Commande</a>
         </div>
 
         <div class="services-box">
@@ -107,7 +107,7 @@
               <span>Applications natives :</span> optimisées pour Android ou iOS.</br>
               <span>Applications multiplateformes :</span> développées avec <span>Flutter</span> ou <span>React Native</span>.</br>
               <span>Sur mesure :</span> pour répondre à des besoins spécifiques.</p>
-            <a href="wa.me/22892529800" class="btn">Commander</a>
+            <a href="https://wa.me/22892529800" class="btn">Commander</a>
           </div>          
 
         <div class="services-box">
@@ -117,7 +117,7 @@
               <span>Identité visuelle :</span> pour une image de marque forte et cohérente.</br>
               <span>Design web :</span> pour des interfaces modernes et attractives.</br>
               <span>Création sur mesure :</span> pour des visuels personnalisés adaptés à vos projets.</p>
-            <a href="wa.me/22892529800" class="btn">Commander</a>
+            <a href="https://wa.me/22892529800" class="btn">Commander</a>
         </div>
           
       </div>
@@ -133,7 +133,7 @@
           <div class="portfolio-layer">
             <h4>GtaLeave</h4>
             <p>Plateforme RH pour gérer les demandes de congé. Une application web intuitive pour simplifier la gestion des congés au sein des entreprises.</p>
-            <a href="wa.me/22892529800"><i class='bx bx-link-external'></i></a>
+            <a href="https://wa.me/22892529800"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
         <div class="portfolio-box">
@@ -141,7 +141,7 @@
           <div class="portfolio-layer">
             <h4>Payroll</h4>
             <p>Application web dédiée à la gestion de la paie. Elle permet de suivre et gérer les salaires de manière simple et efficace.</p>
-            <a href="wa.me/22892529800"><i class='bx bx-link-external'></i></a>
+            <a href="https://wa.me/22892529800"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
         <div class="portfolio-box">
@@ -149,7 +149,7 @@
           <div class="portfolio-layer">
             <h4>SLST - Site Vitrine</h4>
             <p>Site vitrine pour Sedjif Languages and Translation Services. Un design moderne et une interface épurée pour promouvoir les services de traduction et d'interprétariat.</p>
-            <a href="wa.me/22892529800"><i class='bx bx-link-external'></i></a>
+            <a href="https://wa.me/22892529800"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
         <div class="portfolio-box">
@@ -157,7 +157,7 @@
           <div class="portfolio-layer">
             <h4>Optique Miakponou - Site Vitrine</h4>
             <p>Site vitrine pour le centre optique Miakponou. Un design simple et élégant pour présenter leurs services de qualité en optique.</p>
-            <a href="wa.me/22892529800"><i class='bx bx-link-external'></i></a>
+            <a href="https://wa.me/22892529800"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
         <div class="portfolio-box">
@@ -165,7 +165,7 @@
           <div class="portfolio-layer">
             <h4>SLTS - Conception Graphique</h4>
             <p>Conception graphique pour Sedjif Languages and Translation Services. Création d'éléments visuels personnalisés pour renforcer l'image de marque.</p>
-            <a href="wa.me/22892529800"><i class='bx bx-link-external'></i></a>
+            <a href="https://wa.me/22892529800"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
         <div class="portfolio-box">
@@ -173,7 +173,7 @@
           <div class="portfolio-layer">
             <h4>Miss TikTok 2023 - Couverture</h4>
             <p>Conception graphique pour la couverture de Miss TikTok 2023. Un visuel captivant pour marquer l'événement et attirer l'attention des internautes.</p>
-            <a href="wa.me/22892529800"><i class='bx bx-link-external'></i></a>
+            <a href="https://wa.me/22892529800"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
       </div>
@@ -182,18 +182,48 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contacts <span>!</span></h2>
 
-      <form action="#">
+      <form id="whatsappForm">
         <div class="input-box">
-          <input type="text" placeholder="Nom et prénoms">
-          <input type="email" placeholder="Email ">
+          <input type="text" id="name" placeholder="Nom et prénoms" required>
+          <input type="email" id="email" placeholder="Email" required>
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Numero de télephone">
-          <input type="text" placeholder="Objet du message">
+          <input type="tel" id="phone" placeholder="Numéro de téléphone" required>
+          <input type="text" id="subject" placeholder="Objet du message" required>
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Votre Message"></textarea>
-        <input  type="submit" value="Envoyer" class="btn"> 
+        <textarea id="message" cols="30" rows="10" placeholder="Votre Message" required></textarea>
+        <input type="submit" value="Envoyer via WhatsApp" class="btn"> 
       </form>
+      
+      <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+      
+          // Récupération des champs
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const subject = document.getElementById('subject').value.trim();
+          const message = document.getElementById('message').value.trim();
+      
+          // Construction du message formaté
+          const fullMessage = 
+            `*Nom:* ${name}%0A` +
+            `*Email:* ${email}%0A` +
+            `*Téléphone:* ${phone}%0A` +
+            `*Sujet:* ${subject}%0A%0A` +
+            `*Message:* ${message}`;
+      
+          // Ton numéro WhatsApp (format international sans + ni 00)
+          const yourWhatsAppNumber = "22892529800"; // exemple Côte d'Ivoire
+      
+          // Générer le lien WhatsApp
+          const whatsappLink = `https://wa.me/${yourWhatsAppNumber}?text=${fullMessage}`;
+      
+          // Redirection vers WhatsApp
+          window.open(whatsappLink, '_blank');
+        });
+      </script>      
     </section>
     <!-- footer design -->
     <footer class="footer">
